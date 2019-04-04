@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post.reg</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            vertical-align: baseline;
+        }
+
+        body {
+            line-height: 1;
+            font-family: BentonSans, sans-serif;
+            background-color: #cdd4f2;
+        }
+
+        html, body {
+            width: 100%;
+            margin: 0;
+        }
+
+        HTML, body, div, h1, h2, h3, h4, h5, h6, p, main, header, footer, form {
+            font-size: 100%;
+        }
+
+        img:hover {
+            -webkit-filter: brightness(60%);
+            transition: all 0.8s ease;
+        }
+        /* liten effekt for alle bilder */
+        button:hover {
+            transition: all 0.8s ease;
+        }
+        button:active{
+            transition: all 0s ease;
+        }
+
+        .admin {
+            display: none;
+        }
+
+        /* CSS for login-siden */
+        #login {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 100vh;
+            background-color: #cdd4f2;
+        }
+
+        #login h1 {
+            font-size: 150%;
+            color: #000;
+            text-align: center;
+        }
+
+        #login form {
+            display: grid;
+            margin: 50px;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+
+        #login form input {
+            height: 4vh;
+            margin-top: 2vh;
+            width: 100%;
+            color: #770b0b;
+            font-weight: bold;
+            border-radius: 50px;
+            text-align: center;
+        }
+
+        #login input::placeholder {
+            color: #770b0b;
+            font-weight: bold;
+        }
+
+        #login form button {
+            height: 75%;
+            margin-top: 3vh;
+            border-radius: 50px;
+        }
+
+        #login form button:hover {
+            background-color: #cc0c0c;
+            border: 2px solid #cc0c0c;
+            transition: all 0.5s ease;
+            color: whitesmoke;
+        }
+
+        #login form button:active {
+            background-color: #770b0b;
+            border: 2px solid #770b0b;
+            color: whitesmoke;
+        }
+
+        #login img {
+            height: 60vh;
+            grid-column: span 2;
+            margin: 0 auto;
+        }
+
+        #login img:hover {
+            -webkit-filter: brightness(75%);
+            transition: all 0.5s ease;
+        }
+
+        #feilmelding {
+            color: red;
+            display: none;
+        }
+
+        #registrerBrukerButton {
+            background-color: dodgerblue;
+            color: whitesmoke;
+            border: dodgerblue solid 2px;
+        }
+
+        #loginButton {
+            background-color: whitesmoke;
+            color: dodgerblue;
+            border: dodgerblue solid 2px;
+        }
+
+        /*CSS for header*/
+        header {
+            display: none;
+            position: fixed;
+            text-align: left;
+            background-color: whitesmoke;
+            margin: 0;
+            padding: 15px;
+            width: 100%;
+        }
+
+        header button {
+            border-radius: 8px;
+            background-color: dodgerblue;
+            color: whitesmoke;
+            font-size: 17px;
+            border: solid 4px dodgerblue;
+        }
+
+        header button:hover {
+            background-color: #cc0c0c;
+            transition: all 0.5s ease;
+            border: solid #cc0c0c 4px;
+        }
+
+        header button:active {
+            background-color: #770b0b;
+            border: solid 4px #770b0b
+        }
+
+        header p {
+            display: inline-block;
+            margin-right: 2vh;
+            color: dodgerblue;
+        }
+
+        /* CSS for Registreringen av poster formet*/
+        .admin {
+            grid-column: span 3;
+            margin: 2vh 5vw 5vh 5vw;
+        }
+
+        .admin label{
+            font-weight: bold;
+
+        }
+
+        .admin form select {
+            height: 4vh;
+            width: 100%;
+            color: #770b0b;
+            font-weight: bold;
+            border-radius: 50px;
+            text-align: center;
+            margin-top: 2vh;
+
+        }
+
+        .admin form input {
+            height: 4vh;
+            width: 100%;
+            color: #770b0b;
+            font-weight: bold;
+            border-radius: 50px;
+            text-align: center;
+            margin-top: 1vh;
+            margin-bottom: 2vh;
+        }
+
+        .admin button {
+            margin-top: 2vh;
+            border-radius: 8px;
+            background-color: dodgerblue;
+            color: whitesmoke;
+            font-size: 17px;
+            border: solid 4px dodgerblue;
+        }
+
+        .admin button:hover {
+            background-color: #cc0c0c;
+            border: solid 4px #cc0c0c;
+            transition: all 0.5s ease;
+
+        }
+
+        /*Main CSS*/
+        main {
+            display: none;
+            padding-top: 5vh;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin: 0 5vw 0 5vw;
+        }
+
+        #postShow {
+            grid-column: span 3;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .Post {
+            grid-column: span 1;
+            margin-top: 5vh;
+        }
+
+        .Post img {
+            display: block;
+            width: 26vw;
+            margin-right: auto;
+            margin-left: auto;
+            max-height: 30vh;
+        }
+
+        .Post h3 {
+            text-align: center;
+            font-size: 150%;
+            color: black;
+        }
+
+        .Post p {
+            text-align: center;
+            margin-top: 2vh;
+            font-weight: bold;
+        }
+
+        #button {
+            text-align: center;
+        }
+
+        #Ja {
+            margin: 2vh auto auto auto;
+            border-radius: 8px;
+            background-color: green;
+            color: whitesmoke;
+            font-size: 17px;
+            border: solid 4px green;
+            width: 45%;
+
+        }
+
+        #Ja:hover {
+            background-color: greenyellow;
+            color: black;
+        }
+
+        #Ja:active {
+            background-color: whitesmoke;
+            color: dodgerblue;
+            border: solid 4px dodgerblue;
+        }
+
+        #Nei {
+            margin: 2vh auto auto auto;
+            border-radius: 8px;
+            background-color: #770b0b;
+            color: whitesmoke;
+            font-size: 17px;
+            border: solid 4px #770b0b;
+            width: 45%;
+        }
+
+        #Nei:hover {
+            background-color: #cc0c0c;
+            color: black;
+        }
+
+        #Nei:active {
+            background-color: black;
+            border: solid 4px black;
+        }
+
+        .visAvstem {
+            width: 100%;
+        }
+
+        .visUp {
+            margin-top: 2vh;
+            display: inline-block;
+            background-color: #0a3312;
+            width: 45%;
+            float: left;
+            border-radius: 20px;
+            margin-left: 5%;
+        }
+
+        .visUp p {
+            color: whitesmoke;
+            margin-bottom: 2vh;
+            font-size: 150%;
+            font-weight: bold;
+        }
+
+        .visDown {
+            border-radius: 20px;
+            margin-top: 2vh;
+            display: inline-block;
+            background-color: #44080b;
+            width: 45%;
+            float: right;
+            margin-right: 5%;
+        }
+
+        .visDown p {
+            color: whitesmoke;
+            margin-bottom: 2vh;
+            font-size: 150%;
+            font-weight: bold;
+        }
+
+        /* sorter etter elementet CSS*/
+        #sortBy {
+            margin-top: 5vh;
+            grid-column: span 3;
+            text-align: center;
+        }
+
+        #sortBy button {
+            height: 75%;
+            margin-top: 3vh;
+            border-radius: 20px;
+            width: 16%;
+            padding: 10px;
+        }
+
+        #sortBy button:hover {
+            background-color: #cc0c0c;
+            border: 2px solid #cc0c0c;
+            transition: all 0.8s ease;
+            color: whitesmoke;
+        }
+
+        #sortBy button:active {
+            background-color: #770b0b;
+            border: 2px solid #770b0b;
+            color: whitesmoke;
+        }
+
+        .B1 {
+            background-color: dodgerblue;
+            color: whitesmoke;
+            border: dodgerblue solid 2px;
+        }
+
+        .B2 {
+            background-color: whitesmoke;
+            color: dodgerblue;
+            border: dodgerblue solid 2px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="login">
+    <img src="http://i.imgur.com/sdO8tAw.png" alt="">
+    <div>
+        <form onsubmit="registrerBruker(event)" id="registrerBrukerSkjema">
+            <h1>Registrer en Bruker</h1>
+            <label><input type="text" required id="regBrukernavn" placeholder="Brukernavn"></label>
+            <label><input type="password" required id="regPassord" placeholder="Passord"></label>
+            <button type="submit" id="registrerBrukerButton">Registrer bruker</button>
+        </form>
+    </div>
+    <div>
+        <form onsubmit="Login(event)" id="loginSkjema">
+            <h1>Logg Inn</h1>
+            <label><input type="text" required id="loginBrukernavn" placeholder="Brukernavn"></label>
+            <label><input type="password" required id="loginPassord" placeholder="Passord"></label>
+            <button type="submit" id="loginButton">Logg inn</button>
+        </form>
+    </div>
+    <div id="feilmelding">
+        <h1>Du har prøvd å logge inn med feil passord</h1>
+    </div>
+</div>
+<header></header>
+<main>
+    <div id="sortBy">
+        <h2>Sorter etter:</h2> <br>
+        <button class="B1" onclick="sortOnlyMemes()">Memes</button>
+        <button class="B2" onclick="sortOnlyFilmer()">Filmer</button>
+        <button class="B1" onclick="sortOnlyMat()">Mat</button>
+        <button class="B2" onclick="sortOnlySoeteKatter()">Søte Katter</button>
+        <button class="B1" onclick="sortByUpvotes()">Flest Upvotes</button>
+        <button class="B2" onclick="sortByDownvotes()">Flest Downvotes</button>
+    </div>
+    <div class="admin">
+        <form id="regPost" onsubmit="registrerPost(event)">
+            <h1>Post Registrering</h1>
+            <label>Post Navn: <input id="postNavn" type="text" required></label> <br>
+            <label> Link til Post: <input id="postBilde" type="text" required></label> <br>
+            <label>Upvotes: <input id="upVotes" type="number" required></label> <br>
+            <label>Downvote: <input id="downVotes" type="number"> </label> <br>
+            <label>Kategori: <select id="postKategori" required>
+                <option value="Memes"> Memes</option>
+                <option value="søtKatt"> Søte Katter</option>
+                <option value="Film">Film</option>
+                <option value="Mat">Beste middagsmat</option>
+
+            </select> </label>
+            <button type="submit">Send inn</button>
+        </form>
+    </div>
+    <div id="postShow">
+    </div>
+</main>
+<script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDETYNzPOU1tbQurslz0qzlaWJbAADnqGY",
+        authDomain: "hot-or-not-clone.firebaseapp.com",
+        databaseURL: "https://hot-or-not-clone.firebaseio.com",
+        projectId: "hot-or-not-clone",
+        storageBucket: "hot-or-not-clone.appspot.com",
+        messagingSenderId: "103348700136"
+    };
+    firebase.initializeApp(config);
+</script>
+
+
+<script>
+    //henter database og variabler til senere bruk
+    let db = firebase.database();
+    let post = db.ref("post");
+    let brukere = db.ref("brukere");
+    let avstemninger = db.ref("avstemninger");
+    let brukerPaa;
+
+    // HTML objekter
+    let main = document.querySelector("main");
+    let postShow = document.querySelector("#postShow");
+
+    // Lytterfunksjon til hendelsen submit på skjemaet
+    function registrerPost(event) {
+        event.preventDefault();
+        let postNavn = document.querySelector("#postNavn");
+        let postBilde = document.querySelector("#postBilde");
+        let upVotes = document.querySelector("#upVotes");
+        let downVotes = document.querySelector("#downVotes");
+        let postKategori = document.querySelector("#postKategori");
+        let regPost = document.querySelector("#regPost");
+        console.log(postKategori.value, upVotes, postBilde);
+
+        // Henter verdiene fra skjemaet og registrerer
+        // Postregistrering i databasen timebestilling1
+        post.push({
+            "navn": postNavn.value,
+            "bilde": postBilde.value,
+            "up": -upVotes.value,
+            "down": -downVotes.value,
+            "kategori": postKategori.value
+        }).then(function () {
+            // Nullstiller verdiene til inputfeltene
+            regPost.reset();
+        });
+    }
+
+    // Denne funksjonen registrer brukere i Firebase
+    function registrerBruker(event) {
+        event.preventDefault();
+        //her pusher vi objektet til firebase
+        brukere.push({
+            "brukernavn": document.querySelector("#regBrukernavn").value,
+            "passord": document.querySelector("#regPassord").value,
+            "admin": false
+        });
+        console.log("bruker registrert");
+        registrerBrukerSkjema.reset();
+    }
+
+    // her har vi funksjonen som endrer hvilken elementer som er synlige om du logger inn med en bruker som er registrert
+    function Login() {
+        event.preventDefault();
+        //definerer variabler
+        let brukernavn = document.querySelector("#loginBrukernavn");
+        let passord = document.querySelector("#loginPassord");
+
+        brukere
+            .orderByChild("brukernavn")
+            .equalTo(brukernavn.value)
+            .on("child_added", function (snapshotLogin) {
+                let bruker = snapshotLogin.val();
+                let brukerKey = snapshotLogin.key;
+                //her sjekker vi om brukeren logger inn med riktig passord
+                if (passord.value === bruker.passord) {
+                    console.log("logget inn");
+                    //Hvilke elementer som er synlige endres
+                    let login = document.querySelector("#login");
+                    let admin = document.querySelector(".admin");
+                    let header = document.querySelector("header");
+                    login.style.display = "none";
+                    main.style.display = "grid";
+                    header.style.display = "block";
+                    header.innerHTML = `
+                    <p>${bruker.brukernavn}</p><button onclick="location.reload()">Logg ut</button>
+                    `;
+                    brukerPaa = brukerKey;
+                    //elementer som kun er synlige for admins
+                    if (bruker.admin) {
+                        admin.style.display = "block";
+                    }
+                } else {
+                    feilmelding.style.display = "block"
+                }
+
+            })
+    }
+
+    post.on("child_added", visPost);
+
+    // her viser vi postene
+    function visPost(snapshot) {
+        let post = snapshot.val();
+        let noekkel = snapshot.key;
+        postShow.innerHTML += `
+    <div class="Post" data-kategori="${post.kategori}">
+        <h3>${post.navn}</h3>
+        <img id="postImg" src="${post.bilde}">
+        <p>Er dette et bra ${post.kategori}?</p>
+        <div id="button"> <button id="Ja" onclick="registrerVote('Ja', '${noekkel}')">Ja!</button>
+        <button id="Nei" onclick="registrerVote('Nei', '${noekkel}')">Nei!</button>
+        </div>
+        <div class="visAvstem">
+        <div class="visUp" id="visUp-${noekkel}">
+<p>${-post.up}</p>
+</div>
+<div class="visDown"  id="visDown-${noekkel}">
+<p>${-post.down}</p>
+</div>
+</div>
+    </div>
+
+    `;
+    }
+
+    // denne funksjonen er ikke helt ferdi, den registrer avstemmingen, men ikke fått den til å gjøre alt den skal
+    function registrerVote(verdi, noekkel) {
+        console.log("Stemme Registrert");
+
+        //her setter vi pk til entetiseringen
+        let avstemmingKey = brukerPaa + noekkel;
+
+//her pusher vi entetiseringen
+        let avstemming = avstemninger.child(avstemmingKey);
+
+        let avstemmingData = {
+            "bruker": brukerPaa,
+            "verdi": verdi,
+            "post": noekkel
+        };
+
+        avstemming.set(avstemmingData);
+
+        let postRef = db.ref("post/" + noekkel);
+        postRef.once("value", function (postsnapshot) {
+            let postData = postsnapshot.val();
+
+            if (verdi === 'Ja') {
+                postData.up--;
+            } else {
+                postData.down--;
+            }
+            console.log(postData);
+            console.log(noekkel);
+            postRef.update(postData);
+
+            // Endrer selve posten
+            let visDown = document.querySelector(`#visDown-${noekkel} p`);
+            visDown.innerHTML = -postData.down;
+            let visUp = document.querySelector(`#visUp-${noekkel} p`);
+            visUp.innerHTML = -postData.up;
+        });
+    }
+
+    //Her har jeg sorteringsfunksjonene mine
+    function sortOnlyMemes() {
+        postShow.innerHTML = "";
+        post.orderByChild("kategori").equalTo("Memes").on("child_added", visPost);
+    }
+
+    function sortOnlyFilmer() {
+        postShow.innerHTML = "";
+        post.orderByChild("kategori").equalTo("Film").on("child_added", visPost);
+    }
+
+    function sortOnlySoeteKatter() {
+        postShow.innerHTML = "";
+        post.orderByChild("kategori").equalTo("søtKatt").on("child_added", visPost);
+    }
+
+    function sortOnlyMat() {
+        postShow.innerHTML = "";
+        post.orderByChild("kategori").equalTo("Mat").on("child_added", visPost);
+    }
+
+    function sortByUpvotes() {
+        postShow.innerHTML = "";
+        post.orderByChild("up").on("child_added", visPost);
+    }
+
+    function sortByDownvotes() {
+        postShow.innerHTML = "";
+        post.orderByChild("down").on("child_added", visPost);
+    }
+    
+    function sortOnlyMemesByDown() {
+      let sortKMU = document.querySelectorAll(".Post");
+        for (let i = 0; i < sortKMU.length; i++) {
+            if(sortKMU[i].dataset.kategori==="Memes"){
+                sortKMU[i].style.display = "block"
+            } else {
+                sortKMU[i].style.display = "none"
+            }
+        }
+        post.orderByChild("up").on("child_added", visPost);
+    }
+</script>
+
+</body>
+</html>

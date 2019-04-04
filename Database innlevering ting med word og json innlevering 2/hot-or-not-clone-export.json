@@ -1,0 +1,176 @@
+{
+  "avstemninger" : {
+    "-LaPk-40wqaKGzqW3xNd-LaV34jYrAkpNuJQDchg" : {
+      "bruker" : "-LaPk-40wqaKGzqW3xNd",
+      "post" : "-LaV34jYrAkpNuJQDchg",
+      "verdi" : "Ja"
+    },
+    "-LaPk-40wqaKGzqW3xNd-LaV3D_FktxX_rdJ_n0j" : {
+      "bruker" : "-LaPk-40wqaKGzqW3xNd",
+      "post" : "-LaV3D_FktxX_rdJ_n0j",
+      "verdi" : "Ja"
+    },
+    "-LaPk-40wqaKGzqW3xNd-LaV3NEQkouq3sEGg9dH" : {
+      "bruker" : "-LaPk-40wqaKGzqW3xNd",
+      "post" : "-LaV3NEQkouq3sEGg9dH",
+      "verdi" : "Ja"
+    },
+    "-LaPkTMJLkrYnPkO4bmQ-LaV34jYrAkpNuJQDchg" : {
+      "bruker" : "-LaPkTMJLkrYnPkO4bmQ",
+      "post" : "-LaV34jYrAkpNuJQDchg",
+      "verdi" : "Ja"
+    },
+    "-LaPkTMJLkrYnPkO4bmQ-Lb3Ed9572Cw3a5_XJk7" : {
+      "bruker" : "-LaPkTMJLkrYnPkO4bmQ",
+      "post" : "-Lb3Ed9572Cw3a5_XJk7",
+      "verdi" : "Nei"
+    },
+    "-LaPkTMJLkrYnPkO4bmQ-Lb3F53ZILlVTXAryLSs" : {
+      "bruker" : "-LaPkTMJLkrYnPkO4bmQ",
+      "post" : "-Lb3F53ZILlVTXAryLSs",
+      "verdi" : "Nei"
+    },
+    "-LaPst9cppGD093-qPZq-Lb3F53ZILlVTXAryLSs" : {
+      "bruker" : "-LaPst9cppGD093-qPZq",
+      "post" : "-Lb3F53ZILlVTXAryLSs",
+      "verdi" : "Ja"
+    },
+    "-Laspmr_ayI914Qn4ZCF-LaV34jYrAkpNuJQDchg" : {
+      "bruker" : "-Laspmr_ayI914Qn4ZCF",
+      "post" : "-LaV34jYrAkpNuJQDchg",
+      "verdi" : "Ja"
+    },
+    "-Lb3i9vQCoGnnt64Ep5u-Lb3F53ZILlVTXAryLSs" : {
+      "bruker" : "-Lb3i9vQCoGnnt64Ep5u",
+      "post" : "-Lb3F53ZILlVTXAryLSs",
+      "verdi" : "Ja"
+    },
+    "-LbK3_yosqdmr04iYTgE-Lb3F53ZILlVTXAryLSs" : {
+      "bruker" : "-LbK3_yosqdmr04iYTgE",
+      "post" : "-Lb3F53ZILlVTXAryLSs",
+      "verdi" : "Ja"
+    }
+  },
+  "brukere" : {
+    "-LaPk-40wqaKGzqW3xNd" : {
+      "admin" : true,
+      "brukernavn" : "Maioxex",
+      "passord" : "123"
+    },
+    "-LaPkTMJLkrYnPkO4bmQ" : {
+      "admin" : false,
+      "brukernavn" : "MargaaMarius",
+      "passord" : "1234"
+    },
+    "-LaPst9cppGD093-qPZq" : {
+      "admin" : false,
+      "brukernavn" : "Sindrom",
+      "passord" : "MartinErTeit"
+    },
+    "-LaPxXr4aeKvt-6u7WgF" : {
+      "admin" : false,
+      "brukernavn" : "Dennis",
+      "passord" : "Pus"
+    },
+    "-LaVBCZWASuZjEQ4B3-z" : {
+      "admin" : false,
+      "brukernavn" : "Arham",
+      "passord" : "12"
+    },
+    "-LaVRc2UscwLBuUy3Kkf" : {
+      "admin" : false,
+      "brukernavn" : "Sandra",
+      "passord" : "SandiPandi"
+    },
+    "-LaVdFc6wRM9G5GxGjLr" : {
+      "admin" : false,
+      "brukernavn" : "Jenny",
+      "passord" : "Jenny"
+    },
+    "-Laspmr_ayI914Qn4ZCF" : {
+      "admin" : false,
+      "brukernavn" : "Jenny",
+      "passord" : "jenny"
+    },
+    "-Lb3i9vQCoGnnt64Ep5u" : {
+      "admin" : true,
+      "brukernavn" : "Johan",
+      "passord" : "1"
+    },
+    "-LbKfrfafqh542hVPTpN" : {
+      "admin" : false,
+      "brukernavn" : "Heisann",
+      "passord" : "Hei"
+    },
+    "-LbKg-wV8keDnUs6hOVF" : {
+      "admin" : false,
+      "brukernavn" : "Neisann",
+      "passord" : "Nei"
+    }
+  },
+  "post" : {
+    "-LaV34jYrAkpNuJQDchg" : {
+      "bilde" : "https://www.thoughtco.com/thmb/DQr-0CmApI5s4F6NW9XEUxrXUaA=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/1tcq9g-597f51e068e1a20011a86fa4.jpg",
+      "down" : -2,
+      "kategori" : "Memes",
+      "navn" : "One ring",
+      "up" : -1
+    },
+    "-LaV3D_FktxX_rdJ_n0j" : {
+      "bilde" : "https://static.standard.co.uk/s3fs-public/thumbnails/image/2016/08/17/12/meme-exhibition.jpg?w968",
+      "down" : -1,
+      "kategori" : "Memes",
+      "navn" : "Kødd 4 charlie",
+      "up" : -44
+    },
+    "-LaV3NEQkouq3sEGg9dH" : {
+      "bilde" : "https://vegnews.com/media/W1siZiIsIjk4NzcvVmVnTmV3c01lbWUuanBnIl0sWyJwIiwidGh1bWIiLCI2ODB4NDAyIyIseyJmb3JtYXQiOiJqcGcifV0sWyJwIiwib3B0aW1pemUiXV0/VegNewsMeme.jpg?sha=84c5fcdaab096e45",
+      "down" : "-12",
+      "kategori" : "Memes",
+      "navn" : "Vegan",
+      "up" : -44
+    },
+    "-Lb38XYAAbPxmrRNHVV5" : {
+      "bilde" : "https://www.dailydot.com/wp-content/uploads/2018/10/memes-obesity.jpg",
+      "down" : "0",
+      "kategori" : "Memes",
+      "navn" : "Mat",
+      "up" : -12
+    },
+    "-Lb3Ed9572Cw3a5_XJk7" : {
+      "bilde" : "https://www.lifewire.com/thmb/JTJHBp94YuFWqYC2tXt4S4NhPMo=/1100x750/filters:no_upscale():max_bytes(150000):strip_icc()/YoureFat-5b1175138e1b6e0036e631f6.jpg",
+      "down" : 0,
+      "kategori" : "Memes",
+      "navn" : "Fat Phil",
+      "up" : -4
+    },
+    "-Lb3F53ZILlVTXAryLSs" : {
+      "bilde" : "https://quizizz.zendesk.com/hc/article_attachments/115002501069/1024x1024.jpg",
+      "down" : -1,
+      "kategori" : "Memes",
+      "navn" : "Gandalf Study",
+      "up" : 0
+    },
+    "-LbKUygKhIglPtfM0-HZ" : {
+      "bilde" : "http://www.awardscircuit.com/wp-content/uploads/2019/02/captain-marvel-poster-cropped.jpg",
+      "down" : "-43",
+      "kategori" : "Film",
+      "navn" : "Captain Marvel",
+      "up" : "-3"
+    },
+    "-LbKVblcoukrHKi5XSyj" : {
+      "bilde" : "https://i.ytimg.com/vi/ajG10Mz-m1g/hqdefault.jpg",
+      "down" : "-1",
+      "kategori" : "søtKatt",
+      "navn" : "Julekatt",
+      "up" : "-15"
+    },
+    "-LbKW8mYLkrftGm07qV6" : {
+      "bilde" : "https://cdn.pixabay.com/photo/2016/08/23/21/42/lobster-1615616_960_720.jpg",
+      "down" : "-2",
+      "kategori" : "Mat",
+      "navn" : "Hummer",
+      "up" : "-9"
+    }
+  }
+}
